@@ -7,7 +7,6 @@ package de.tyxar.clean_architecture_plugin.ui
 
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.ui.DialogWrapper
-import javax.swing.JCheckBox
 import javax.swing.JComponent
 import javax.swing.JPanel
 import javax.swing.JTextField
@@ -19,28 +18,18 @@ class FeatureDialog(project: Project?) :
     DialogWrapper(project) {
     private var contentPanel: JPanel? = null
     private var nameTextField: JTextField? = null
-    private var splitDataSource: JCheckBox? = null
 
     /**
      * @return feature name
      */
     fun getName(): String? = nameTextField?.text
 
-    /**
-     * @return split data sources
-     */
-    fun splitSource(): Boolean? = splitDataSource?.isSelected
-
-    override fun createCenterPanel(): JComponent? {
-        return contentPanel
-    }
+    override fun createCenterPanel(): JComponent? =  contentPanel
 
     /**
      * Sets focus on the text field
      */
-    override fun getPreferredFocusedComponent(): JComponent? {
-        return nameTextField
-    }
+    override fun getPreferredFocusedComponent(): JComponent? = nameTextField
 
     init {
         init()

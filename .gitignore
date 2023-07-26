@@ -38,3 +38,8 @@ build/*
 
 # JIRA plugin
 atlassian-ide-plugin.xml
+local.properties
+
+.DS_Store
+
+.idea/

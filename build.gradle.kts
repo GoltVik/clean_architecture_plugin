@@ -72,7 +72,6 @@ intellij {
     pluginName = pluginName
     version = ideaVersion
     type = "IC"
-    alternativeIdePath = "/opt/android-studio"
     updateSinceUntilBuild = false
     setPlugins("android")
 }
